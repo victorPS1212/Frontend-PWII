@@ -1,6 +1,8 @@
 <h1 class="my-3 text-prymary">
   Listar Produto
-  <button class="btn btn-success mt-2 float right">Cadastrar</button>
+  <button type="button" routerLink="/Produtos/Cadastrar" class="btn btn-success mt-2 float right">
+  Cadastrar
+</button>
 </h1>
 
 <div class="card shadow">
@@ -14,6 +16,31 @@
         <th>açoens</th>
       </tr>
     </thead>
+    <tbody>
+      <tr *ngFor="let prod of listaProdutos">
+        <td>1</td>
+        <td>Curso de Angular</td>
+        <td>31/12/2021</td>
+        <td>R$ 500,00</td>
+        <td>
+          <button class="btn btn-warning">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+          <button class="btn btn-danger ml-2">
+            <i class="fa fa-trash-o" aria-hidden="true"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
 
   </table>
 </div>
+
+<!--
+  <tr *ngFor="let prod of listaProdutos">
+          <td>{{prod.id}}</td>
+          <td>{{prod.nome}}</td>
+          <td>{{prod.validade | date: "shortDate"}}</td>
+          <td>{{prod.precoProduto | currency: "BRL"}}</td>
+        </tr>
+-->

@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class CadastrarProdutoComponent {
 
+  nome: string = "";
+  validade: string="";
+  preco: number=0;
+
+  salvarProduto(): void {
+    console.log('Nome: ', this.nome);
+    console.log('Validade:', this.validade);
+    console.log('Preco:', this.preco);
+    alert('Salvo com Sucesso!');
+  }
+
 }
